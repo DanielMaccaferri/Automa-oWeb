@@ -1,5 +1,7 @@
 package br.com.aprendendoautomatizar.core;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -18,6 +20,9 @@ public final class Driver {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		return driver;
 
 	}

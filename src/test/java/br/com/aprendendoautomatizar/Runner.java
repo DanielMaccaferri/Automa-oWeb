@@ -16,7 +16,7 @@ public class Runner {
 	
 	@AfterClass
 	public static void encerraTeste(){
-		Driver.encerraDriver();
+		//Driver.encerraDriver();
 	}
 	
 
