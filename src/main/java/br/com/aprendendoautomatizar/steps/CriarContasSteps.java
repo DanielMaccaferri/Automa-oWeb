@@ -3,6 +3,7 @@ package br.com.aprendendoautomatizar.steps;
 import static br.com.aprendendoautomatizar.core.Driver.getDriver;
 
 import br.com.aprendendoautomatizar.funcionalidade.AuthenticationFuncionalidade;
+import br.com.aprendendoautomatizar.funcionalidade.CreateAnAccountFuncionalidade;
 import br.com.aprendendoautomatizar.funcionalidade.HomeFuncionalidade;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
@@ -13,6 +14,7 @@ public class CriarContasSteps {
 	String url = "http://automationpractice.com/index.php";
 	HomeFuncionalidade home = new HomeFuncionalidade();
 	AuthenticationFuncionalidade authentication = new AuthenticationFuncionalidade();
+	CreateAnAccountFuncionalidade create= new CreateAnAccountFuncionalidade();
 	
 	@Dado("^que o usuario preenche os dados$")
 	public void que_o_usuario_preenche_os_dados() throws Throwable {
@@ -21,7 +23,11 @@ public class CriarContasSteps {
 		home.clicarBotaoSignIn();
 		authentication.preencherCampoEmailAdress();
 		authentication.clicarBotaoCreateAccount();
-	  
+		create.clicarBotaoGender();
+		create.escreverCampoFirstName();
+		create.escreverCampoLastName();
+		create.escreverCampoPassword();
+		create.selecionarCampoDate();
 	}
 
 	@Quando("^os dados estão corretos$")
