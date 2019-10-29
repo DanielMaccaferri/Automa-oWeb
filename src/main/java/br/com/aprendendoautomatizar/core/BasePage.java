@@ -3,7 +3,6 @@ package br.com.aprendendoautomatizar.core;
 import static br.com.aprendendoautomatizar.core.Driver.getDriver;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class BasePage {
@@ -16,8 +15,8 @@ public class BasePage {
 		getDriver().findElement(by).sendKeys(escreve);
 	}
 
-	public void selecionaCampo(WebElement webElement, int index) {
-		Select select = new Select (getDriver().findElement((By) webElement));
+	public void selecionaCampo(By by,int index) {
+		Select select = new Select (getDriver().findElement(by));
 		select.selectByIndex(index);
 	}
 }

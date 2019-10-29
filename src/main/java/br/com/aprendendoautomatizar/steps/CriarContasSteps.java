@@ -28,6 +28,15 @@ public class CriarContasSteps {
 		create.escreverCampoLastName();
 		create.escreverCampoPassword();
 		create.selecionarCampoDate();
+		create.selecionarCampoMonth();
+		create.selecionarCampoYear();
+		create.selecionarCampoAddress();
+		create.selecionarCampoCity();
+		create.selecionarCampoState();
+		create.selecionarCampoCountry();
+		create.selecionarCampoPhone();
+		create.selecionarCampoMyAddress();
+		create.selecionarCampoZipCode();
 	}
 
 	@Quando("^os dados estão corretos$")

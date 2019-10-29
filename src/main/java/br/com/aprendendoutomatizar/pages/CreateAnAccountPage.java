@@ -60,6 +60,9 @@ public class CreateAnAccountPage extends BasePage {
 	@FindBy(id = "id_state")
 	WebElement campoState;
 
+	@FindBy(id = "postcode")
+	WebElement campoZipCode;
+
 	@FindBy(id = "id_country")
 	WebElement campoCountry;
 
@@ -187,6 +190,14 @@ public class CreateAnAccountPage extends BasePage {
 
 	public void setCampoMyAddress(WebElement campoMyAddress) {
 		this.campoMyAddress = campoMyAddress;
+	}
+	
+	public WebElement getCampoZipCode() {
+		return campoZipCode;
+	}
+
+	public void setCampoZipCode(WebElement campoZipCode) {
+		this.campoZipCode = campoZipCode;
 	}
 
 }
