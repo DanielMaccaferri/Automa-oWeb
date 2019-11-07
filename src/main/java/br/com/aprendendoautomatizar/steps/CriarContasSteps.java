@@ -37,6 +37,7 @@ public class CriarContasSteps {
 		create.selecionarCampoPhone();
 		create.selecionarCampoMyAddress();
 		create.selecionarCampoZipCode();
+		create.selecionarCampoRegister();
 	}
 
 	@Quando("^os dados estão corretos$")

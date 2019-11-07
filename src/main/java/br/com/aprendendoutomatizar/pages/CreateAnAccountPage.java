@@ -72,6 +72,10 @@ public class CreateAnAccountPage extends BasePage {
 	@FindBy(id = "alias")
 	WebElement campoMyAddress;
 
+	@FindBy(id = "submitAccount") 
+	WebElement campoRegister;
+	
+	
 	public WebElement getBotaoGender() {
 		return botaoGender;
 	}
@@ -198,6 +202,15 @@ public class CreateAnAccountPage extends BasePage {
 
 	public void setCampoZipCode(WebElement campoZipCode) {
 		this.campoZipCode = campoZipCode;
+	}
+	
+    
+	public WebElement getCampoRegister() {
+		return campoRegister;
+	}
+
+	public void setCampoRegister(WebElement campoRegister) {
+		this.campoRegister = campoRegister;
 	}
 
 }

@@ -4,12 +4,14 @@ import org.openqa.selenium.By;
 
 import com.github.javafaker.Faker;
 
+import br.com.aprendendoautomatizar.core.Utils;
 import br.com.aprendendoutomatizar.pages.CreateAnAccountPage;
 
 public class CreateAnAccountFuncionalidade {
 
 	private CreateAnAccountPage account;
 	Faker faker = new Faker();
+	private Utils utils = new Utils();
 
 	public CreateAnAccountFuncionalidade() {
 
@@ -46,7 +48,7 @@ public class CreateAnAccountFuncionalidade {
 	}
 
 	public void selecionarCampoAddress(){
-		account.getCampoAddress().sendKeys(faker.address().fullAddress());
+		account.getCampoAddress().sendKeys(utils.enderecos());
 	}
 	
 	public void selecionarCampoCity(){
@@ -58,7 +60,7 @@ public class CreateAnAccountFuncionalidade {
 	}
 	
 	public void selecionarCampoZipCode(){
-		account.getCampoZipCode().sendKeys(faker.address().zipCode());
+		account.getCampoZipCode().sendKeys(utils.ceps());
 	}
 	
 	public void selecionarCampoCountry(){
@@ -70,8 +72,11 @@ public class CreateAnAccountFuncionalidade {
 	}
 	
 	public void selecionarCampoMyAddress(){
-		account.getCampoMyAddress().sendKeys(faker.address().fullAddress());
+		account.getCampoMyAddress().sendKeys(faker.address().streetAddress());
 	}
 	
+	public void selecionarCampoRegister(){
+		account.getCampoRegister().click();
+	}
 }
 	
