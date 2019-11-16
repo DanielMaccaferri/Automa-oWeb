@@ -75,7 +75,18 @@ public class CreateAnAccountPage extends BasePage {
 	@FindBy(id = "submitAccount") 
 	WebElement campoRegister;
 	
+	@FindBy(className = "sf-with-ul")
+	WebElement campoWomen;
 	
+	
+	public WebElement getCampoWomen() {
+		return campoWomen;
+	}
+
+	public void setCampoWomen(WebElement campoWomen) {
+		this.campoWomen = campoWomen;
+	}
+
 	public WebElement getBotaoGender() {
 		return botaoGender;
 	}
@@ -212,5 +223,7 @@ public class CreateAnAccountPage extends BasePage {
 	public void setCampoRegister(WebElement campoRegister) {
 		this.campoRegister = campoRegister;
 	}
+	
+	
 
 }

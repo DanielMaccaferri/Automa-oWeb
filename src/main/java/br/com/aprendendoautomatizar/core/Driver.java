@@ -2,6 +2,7 @@ package br.com.aprendendoautomatizar.core;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -18,6 +19,7 @@ public final class Driver {
 				System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe");
 		if (driver == null) {
 			driver = new ChromeDriver();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
 			driver.manage().window().maximize();
 		}
 		

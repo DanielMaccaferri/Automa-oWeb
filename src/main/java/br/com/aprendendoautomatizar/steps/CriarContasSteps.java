@@ -3,8 +3,10 @@ package br.com.aprendendoautomatizar.steps;
 import static br.com.aprendendoautomatizar.core.Driver.getDriver;
 
 import br.com.aprendendoautomatizar.funcionalidade.AuthenticationFuncionalidade;
+import br.com.aprendendoautomatizar.funcionalidade.CatalogoProdutoFuncionalidade;
 import br.com.aprendendoautomatizar.funcionalidade.CreateAnAccountFuncionalidade;
 import br.com.aprendendoautomatizar.funcionalidade.HomeFuncionalidade;
+import br.com.aprendendoautomatizar.funcionalidade.ProductAddToCartFuncionalidade;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
@@ -15,14 +17,17 @@ public class CriarContasSteps {
 	HomeFuncionalidade home = new HomeFuncionalidade();
 	AuthenticationFuncionalidade authentication = new AuthenticationFuncionalidade();
 	CreateAnAccountFuncionalidade create= new CreateAnAccountFuncionalidade();
-	
+	CatalogoProdutoFuncionalidade catalogo = new CatalogoProdutoFuncionalidade();
+	ProductAddToCartFuncionalidade product = new ProductAddToCartFuncionalidade();
+			
+			
 	@Dado("^que o usuario preenche os dados$")
 	public void que_o_usuario_preenche_os_dados() throws Throwable {
 		getDriver().get(url);
 		
 		home.clicarBotaoSignIn();
 		authentication.preencherCampoEmailAdress();
-		authentication.clicarBotaoCreateAccount();
+		authentication.clicarBotaoCreateAccount();		
 		create.clicarBotaoGender();
 		create.escreverCampoFirstName();
 		create.escreverCampoLastName();
@@ -38,6 +43,14 @@ public class CriarContasSteps {
 		create.selecionarCampoMyAddress();
 		create.selecionarCampoZipCode();
 		create.selecionarCampoRegister();
+		create.selecionarCampoWomen();
+		catalogo.clicarBotaoBlouse();
+		product.selecionaCampoCor();
+		product.selecionaCampoSize();
+		product.selecionarCampoQuantidade();
+		product.selecionaBotaoAddToCart();
+		product.selecionaBotaoProceed();
+		
 	}
 
 	@Quando("^os dados estão corretos$")

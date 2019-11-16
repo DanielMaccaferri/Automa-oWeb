@@ -78,5 +78,9 @@ public class CreateAnAccountFuncionalidade {
 	public void selecionarCampoRegister(){
 		account.getCampoRegister().click();
 	}
+	
+	public void selecionarCampoWomen(){
+		account.getCampoWomen().click();
+	}
 }
 	
