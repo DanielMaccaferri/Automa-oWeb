@@ -1,7 +1,6 @@
 package br.com.aprendendoautomatizar.funcionalidade;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
 import com.github.javafaker.Faker;
 
@@ -39,5 +38,29 @@ public class ProductAddToCartFuncionalidade {
 
 	public void selecionaBotaoProceed(){
 		account.getBotaoProceed().click();
+	}
+	
+	public void selecionarBotaoProceedFinal(){
+		account.getBotaoProceedFinal().click();
+	}
+	
+	public void selecionarbotaoProceedFinalAddress(){
+		account.getBotaoProceedFinalAddress().click();
+	}
+	
+	public void selecionarCheckBoxIAgree(){
+		account.getCheckBoxIAgree().click();
+	}
+	
+	public void selecionarBotaoProceedFinalAgree(){
+		account.getBotaoProceedFinalAgree().click();
+	}
+	
+	public void selecionarBotaoPayment(){
+		account.getBotaoPayment().click();
+	}
+	
+	public void selecionarBotaoConfirmOrder(){
+		account.getBotaoConfirmOrder().click();
 	}
 }

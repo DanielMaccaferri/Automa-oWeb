@@ -49,21 +49,21 @@ formatter.match({
   "location": "CriarContasSteps.que_o_usuario_preenche_os_dados()"
 });
 formatter.result({
-  "duration": 43690018900,
+  "duration": 33544893200,
   "status": "passed"
 });
 formatter.match({
   "location": "CriarContasSteps.os_dados_estão_corretos()"
 });
 formatter.result({
-  "duration": 43100,
+  "duration": 18800,
   "status": "passed"
 });
 formatter.match({
   "location": "CriarContasSteps.o_usuario_e_cadastrado_com_sucesso()"
 });
 formatter.result({
-  "duration": 34300,
+  "duration": 27400,
   "status": "passed"
 });
 });
