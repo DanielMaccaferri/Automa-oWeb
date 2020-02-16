@@ -1,12 +1,15 @@
 package br.com.aprendendoautomatizar.steps;
 
 import static br.com.aprendendoautomatizar.core.Driver.getDriver;
-
+import org.junit.Assert;
 import br.com.aprendendoautomatizar.funcionalidade.AuthenticationFuncionalidade;
 import br.com.aprendendoautomatizar.funcionalidade.CatalogoProdutoFuncionalidade;
 import br.com.aprendendoautomatizar.funcionalidade.CreateAnAccountFuncionalidade;
 import br.com.aprendendoautomatizar.funcionalidade.HomeFuncionalidade;
 import br.com.aprendendoautomatizar.funcionalidade.ProductAddToCartFuncionalidade;
+import br.com.aprendendoautomatizar.screenshot.Screenshot;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
@@ -24,6 +27,11 @@ public class CriarContasSteps {
 	public void que_o_usuario_preenche_os_dados() throws Throwable {
 		getDriver().get(url);
 
+		
+	}
+
+	@Quando("^os dados estão corretos$")
+	public void os_dados_estão_corretos() throws Throwable {
 		home.clicarBotaoSignIn();
 		authentication.preencherCampoEmailAdress();
 		authentication.clicarBotaoCreateAccount();
@@ -57,13 +65,15 @@ public class CriarContasSteps {
 		product.selecionarBotaoConfirmOrder();
 	}
 
-	@Quando("^os dados estão corretos$")
-	public void os_dados_estão_corretos() throws Throwable {
-
+	@Entao("^o usuario e cadastrado com sucesso \"([^\"]*)\"$")
+	public void o_usuario_e_cadastrado_com_sucesso(String mensagem) throws Throwable {
+		
+		 
+	}
+	
+	@After
+	public static void depoisDoStep(Scenario cenario) {
+		Screenshot.screenshot(cenario);
 	}
 
-	@Entao("^o usuario e cadastrado com sucesso$")
-	public void o_usuario_e_cadastrado_com_sucesso() throws Throwable {
-
-	}
 }

@@ -63,4 +63,8 @@ public class ProductAddToCartFuncionalidade {
 	public void selecionarBotaoConfirmOrder(){
 		account.getBotaoConfirmOrder().click();
 	}
+	
+	public void validadaMensagem(){
+		account.getTextoValidacao();
+	}
 }

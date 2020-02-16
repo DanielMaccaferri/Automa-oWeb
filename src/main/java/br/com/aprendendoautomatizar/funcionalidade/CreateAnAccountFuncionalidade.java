@@ -14,7 +14,6 @@ public class CreateAnAccountFuncionalidade {
 	private Utils utils = new Utils();
 
 	public CreateAnAccountFuncionalidade() {
-
 		account = new CreateAnAccountPage();
 	}
 
@@ -22,65 +21,67 @@ public class CreateAnAccountFuncionalidade {
 		account.getBotaoGender().click();
 	}
 	
-	public void escreverCampoFirstName(){
+	public void escreverCampoFirstName() {
 		account.getCampoFirstName().sendKeys(faker.name().firstName());
+		System.out.println(" Nome: " + faker.name().firstName());
 	}
-	
-	public void escreverCampoLastName(){
+
+	public void escreverCampoLastName() {
 		account.getCampoLastName().sendKeys(faker.name().lastName());
+		System.out.println("Sobrenome: " + faker.name().lastName());
 	}
-	
-	public void escreverCampoPassword(){
+
+	public void escreverCampoPassword() {
 		account.getCampoPassword().sendKeys(faker.internet().password());
+		System.out.println("Senha: " + faker.internet().password());
 	}
-	
-	public void selecionarCampoDate(){
+
+	public void selecionarCampoDate() {
 		account.selecionaCampo(By.id("days"), 3);
-		
+
 	}
-	
-	public void selecionarCampoMonth(){
+
+	public void selecionarCampoMonth() {
 		account.selecionaCampo(By.id("months"), 3);
 	}
-	
-	public void selecionarCampoYear(){
+
+	public void selecionarCampoYear() {
 		account.selecionaCampo(By.id("years"), 15);
 	}
 
-	public void selecionarCampoAddress(){
+	public void selecionarCampoAddress() {
 		account.getCampoAddress().sendKeys(utils.enderecos());
 	}
-	
-	public void selecionarCampoCity(){
+
+	public void selecionarCampoCity() {
 		account.getCampoCity().sendKeys(faker.address().city());
 	}
-	
-	public void selecionarCampoState(){
+
+	public void selecionarCampoState() {
 		account.selecionaCampo(By.id("id_state"), 5);
 	}
-	
-	public void selecionarCampoZipCode(){
+
+	public void selecionarCampoZipCode() {
 		account.getCampoZipCode().sendKeys(utils.ceps());
 	}
-	
-	public void selecionarCampoCountry(){
+
+	public void selecionarCampoCountry() {
 		account.selecionaCampo(By.id("id_country"), 1);
 	}
-	
-	public void selecionarCampoPhone(){
+
+	public void selecionarCampoPhone() {
 		account.getCampoPhone().sendKeys(faker.phoneNumber().cellPhone());
 	}
-	
-	public void selecionarCampoMyAddress(){
+
+	public void selecionarCampoMyAddress() {
 		account.getCampoMyAddress().sendKeys(faker.address().streetAddress());
 	}
-	
-	public void selecionarCampoRegister(){
+
+	public void selecionarCampoRegister() {
 		account.getCampoRegister().click();
 	}
-	
-	public void selecionarCampoWomen(){
+
+	public void selecionarCampoWomen() {
 		account.getCampoWomen().click();
 	}
 }
-	

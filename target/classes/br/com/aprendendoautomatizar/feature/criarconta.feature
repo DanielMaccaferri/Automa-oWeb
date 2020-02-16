@@ -9,7 +9,7 @@ Funcionalidade: Criar Conta no Site
 Cenario: Criar conta no site com sucesso
       Dado que o usuario preenche os dados 
       Quando os dados estão corretos
-      Entao o usuario e cadastrado com sucesso                     
+      Entao o usuario e cadastrado com sucesso "Your order on My Store is complet"                    
                 
                 
 						

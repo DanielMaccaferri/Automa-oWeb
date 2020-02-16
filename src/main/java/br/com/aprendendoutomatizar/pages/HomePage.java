@@ -14,7 +14,7 @@ public class HomePage extends BasePage {
 
 	public HomePage() {
 		PageFactory.initElements(Driver.getDriver(), this);
-	}
+			}
 
 	public WebElement getBotaoSignIn() {
 		return botaoSigIn;

@@ -3,7 +3,6 @@ package br.com.aprendendoutomatizar.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import br.com.aprendendoautomatizar.core.BasePage;
 import br.com.aprendendoautomatizar.core.Driver;
 
@@ -24,19 +23,39 @@ public class ProductAddToCartPage extends BasePage {
 
 	@FindBy(xpath = "//button[@class='exclusive']")
 	WebElement botaoAddToCart;
-	
+
 	@FindBy(css = "#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a > span > i")
 	WebElement botaoProceed;
-	
+
 	@FindBy(xpath = "//a[@class='button btn btn-default standard-checkout button-medium']")
 	WebElement botaoProceedFinal;
-	
+
 	@FindBy(xpath = "//button[@class='button btn btn-default button-medium']")
 	WebElement botaoProceedFinalAddress;
-	
+
 	@FindBy(id = "cgv")
 	WebElement checkBoxIAgree;
-	
+
+	@FindBy(xpath = "//button[@class='button btn btn-default standard-checkout button-medium']")
+	WebElement botaoProceedFinalAgree;
+
+	@FindBy(xpath = "//a[@class='bankwire']")
+	WebElement botaoPayment;
+
+	@FindBy(xpath = "//button[@class='button btn btn-default button-medium']")
+	WebElement botaoConfirmOrder;
+
+	@FindBy(css = "#center_column > div > p > strong")
+	WebElement textoValidacao;
+
+	public WebElement getTextoValidacao() {
+		return textoValidacao;
+	}
+
+	public void setTextoValidacao(WebElement textoValidacao) {
+		this.textoValidacao = textoValidacao;
+	}
+
 	public WebElement getBotaoConfirmOrder() {
 		return botaoConfirmOrder;
 	}
@@ -45,15 +64,6 @@ public class ProductAddToCartPage extends BasePage {
 		this.botaoConfirmOrder = botaoConfirmOrder;
 	}
 
-	@FindBy(xpath = "//button[@class='button btn btn-default standard-checkout button-medium']")
-	WebElement botaoProceedFinalAgree;
-
-	@FindBy(xpath = "//a[@class='bankwire']")
-	WebElement botaoPayment;
-	
-	@FindBy(xpath = "//button[@class='button btn btn-default button-medium']")
-	WebElement botaoConfirmOrder;
-	
 	public WebElement getBotaoPayment() {
 		return botaoPayment;
 	}
@@ -61,7 +71,6 @@ public class ProductAddToCartPage extends BasePage {
 	public void setBotaoPayment(WebElement botaoPayment) {
 		this.botaoPayment = botaoPayment;
 	}
-
 
 	public WebElement getBotaoProceedFinalAgree() {
 		return botaoProceedFinalAgree;
@@ -118,6 +127,7 @@ public class ProductAddToCartPage extends BasePage {
 	public void setBotaoAddToCart(WebElement botaoAddToCart) {
 		this.botaoAddToCart = botaoAddToCart;
 	}
+
 	public WebElement getBotaoProceedFinalAddress() {
 		return botaoProceedFinalAddress;
 	}

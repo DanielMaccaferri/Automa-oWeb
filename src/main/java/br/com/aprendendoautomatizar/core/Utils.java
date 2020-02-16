@@ -18,25 +18,20 @@ public class Utils {
 		}
 
 		return endereco;
-
 	}
 
-		private String cep;
+	private String cep;
 
-		public String ceps() {
+	public String ceps() {
 
-			Random random = new Random();
+		Random random = new Random();
 
-			String[] ceps = { "02557", "02730", "02002", "01534" };
+		String[] ceps = { "02557", "02730", "02002", "01534" };
 
-			for (int i = 0; i < 1; i++) {
-				cep = ceps[random.nextInt(ceps.length)];
-			}
-
-			return cep;
-
+		for (int i = 0; i < 1; i++) {
+			cep = ceps[random.nextInt(ceps.length)];
 		}
-
+		
+		return cep;
 	}
-
-
+}
